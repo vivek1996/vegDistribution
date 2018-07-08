@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	  <style>
+  .header {
+    background-color: #2456ad;
+  }
+.footer {
+  
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2456ad;
+   color: white;
+   text-align: center;
+   position: fixed;
+}
+.card {
+  padding:6px; 
+}
+.card1 {
+	width: 40%;
+	height: 50%
+	text-align:center;
+	padding: 2%;
+	color: white;
+}
+body {
+background-color: #373d47;
+}
+</style>
+<script type="text/javascript">
+	var v;
+  function f(v)
+  {
+    alert(v);
+
+  }
+</script>
+</head>
+<body>
+	  <div class="card header">
+    <div class="card-body text-center"><b><h3 class="text-shadow">ADMIN</h3></b></div>
+  </div>
+  <br>
+  <br>
+  <center>
+<div class="container">
+  <button type="button" class="btn btn-primary"  data-toggle="collapse" data-target="#Amount">Change Amount</button>
+  <div id="Amount" class="collapse">
+     <div class="card1">
+  	<form action="changeAmount.php" method="post">
+	<b>VARIETY1: </b><input type="number" name="v1"><br><br>
+	<b>VARIETY2: </b><input type="number" name="v2"><br><br>
+    <b>VARIETY3: </b><input type="number" name="v3"><br><br>
+	<input type="submit" class="btn btn-success" onclick="f('Amount changed successfully')" name="submit" value="Change">
+</form>
+  </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+  <button type="button" class="btn btn-primary"  data-toggle="collapse" data-target="#Add">Add USER</button>
+  <div id="Add" class="collapse">
+        <div class="card1">
+  	<form action="addUser.php" method="post">
+	<b>USER NAME:</b><input type="text" name="uname"><br><br>
+	<b>CITY:     </b><input type="text" name="city"><br><br>
+    <b>LINE:     </b><input type="text" name="line"><br><br>
+	<input type="submit" class="btn btn-success" onclick="f('User Added successfully')" name="submit" value="Add">
+</form>
+  </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+  <button type="button" class="btn btn-primary"  data-toggle="collapse" data-target="#Delete">Delete USER</button>
+  <div id="Delete" class="collapse">
+       <div class="card1">
+  	<form action="deleteUser.php" method="post">
+	<b>USER NAME</b><input type="text" name="un"><br><br>
+	<input type="submit" class="btn btn-success" onclick="f('User Deleted successfully')" name="submit" value="Delete">
+</form>
+  </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+  <button type="button" class="btn btn-primary"  data-toggle="collapse" data-target="#Password">Change Password</button>
+  <div id="Password" class="collapse">
+        <div class="card1">
+  	<form action="changePass" method="post">
+	<b>OLD PASSWORD:</b><input type="text" name="op"><br><br>
+	<b>NEW PASSWORD: </b><input type="text" name="np"><br><br>
+	<input type="submit" class="btn btn-success" onclick="f('Password changed successfully')" name="submit" value="Change">
+</form>
+  </div>
+  </div>
+</div><br>
+	<div class="container">
+ <a href="calc.php"> <button type="button" class="btn btn-primary"  data-toggle="collapse" data-target="#calc">Calculations</button></a>
+  </div>
+  </div>
+</div>
+  </center>
+
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+</body>
+</html>
