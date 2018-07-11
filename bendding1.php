@@ -2,6 +2,7 @@
     $con=mysqli_connect('localhost:3306','root','','tomato');
      $nam=$_POST['tex']; 
      $sql="SELECT * FROM `bending` WHERE name='$nam'";
+
       if ($result=mysqli_query($con,$sql))
      {
         while ($row=mysqli_fetch_row($result))

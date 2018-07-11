@@ -62,8 +62,9 @@
 </head>
 <body>
   <div class="card header1">
-    <div class="card-body text-center"><b><h3>LINE CUSTOMERS</h3></b></div>
+    <div class="card-body text-center"><b><h6>LINE CUSTOMERS</h6></b></div>
   </div>
+   <a href="first.php"><input type="button" class="btn btn-success btn-md" name="back" value="<<Back"></a>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <div class="table-responsive">
 <table id="myTable">

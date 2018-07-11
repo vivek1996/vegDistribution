@@ -48,6 +48,9 @@
     <h1><?php $name=$_POST['text']; echo "$name";
     $con=mysqli_connect('localhost:3306','root','','tomato'); 
     $sql="SELECT * FROM `bending` WHERE name='$name'";
+          $dat=0;
+          $bbox=0;
+          $bamount=0;
       if ($result=mysqli_query($con,$sql))
      {
         while ($row=mysqli_fetch_row($result))
@@ -58,6 +61,12 @@
          $bamount=$row[3];
 
        }
+     }
+     else
+     {
+          $dat=0;
+          $bbox=0;
+          $bamount=0;
      }
     ?>
     </h1>
